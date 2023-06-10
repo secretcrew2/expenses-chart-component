@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            softRed: 'hsl(10, 79%, 65%)',
+            cyan: 'hsl(186, 34%, 60%)',
+            darkBrown: 'hsl(25, 47%, 15%)',
+            mediumBrown: 'hsl(28, 10%, 53%)',
+            cream: 'hsl(27, 66%, 92%)',
+            paleOrange: 'hsl(33, 100%, 98%)'
+          },
+          fontFamily:{
+            sans: ['DM Sans', 'sans-serif'],
+          },
+          fontSize:{
+            base: '1.125rem',
+          }
+        }
+      }
+    }
+  </script>
+<body >
+  <main class="bg-cream min-h-screen flex flex-col justify-center">
+    <div class="p-6 space-y-6 bg-transparent max-w-xl mx-auto">
+      <div class="p-4 flex justify-between items-center bg-softRed rounded-xl">
+        <div >
+          <p class="text-white text-sm text-opacity-80">My balance</p>
+          <p class="text-white text-2xl font-bold">$921.48</p>
+        </div>
+        <div>
+          <img src="images/logo.svg" alt="" class="h-8">
+        </div>
+      </div>
+      <div class="bg-paleOrange p-5 space-y-4">
+        <p class="text-xl font-bold text-darkBrown">
+          Spending - Last 7 days
+        </p>
+        <div class="w-full min-h-[12rem]">
+          <canvas id="expenses"></canvas>
+        </div>
+        <hr>
+        <div class="flex justify-between">
+          <div>
+            <p class="text-sm text-mediumBrown">Total this month</p>
+            <p class="text-3xl font-bold text-darkBrown">$478.33</p>
+          </div>
+          <div class="flex flex-col items-end justify-end">
+            <p class="text-sm text-darkBrown">+2.4%</p>
+            <p class="text-sm text-mediumBrown">from last month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
