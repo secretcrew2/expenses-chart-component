@@ -48,7 +48,9 @@ fetch('data.json')
                     borderSkipped: false
                 }
             },
+            responsive: true,
             maintainAspectRatio: false,
+            aspectRatio:2/1.25,
             
             plugins:{
                 tooltip:{

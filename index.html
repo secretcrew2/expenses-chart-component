@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,47 +33,49 @@
       }
     }
   </script>
-<body >
-  <main class="bg-cream min-h-screen flex flex-col justify-center">
-    <div class="p-6 space-y-6 bg-transparent max-w-xl mx-auto">
-      <div class="p-4 flex justify-between items-center bg-softRed rounded-xl">
-        <div >
-          <p class="text-white text-sm text-opacity-80">My balance</p>
-          <p class="text-white text-2xl font-bold">$921.48</p>
+  <style>
+    .attribution { font-size: 11px; text-align: center; padding-top: 1rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+<body>
+    <main class="min-h-screen bg-cream flex flex-col justify-center">
+        <div class="space-y-4 max-w-md mx-auto">
+            <div class="flex justify-between items-center bg-softRed p-4 rounded-lg">
+                <div>
+                    <p class="text-white text-sm text-opacity-80">My balance</p>
+                    <p class="text-white text-2xl font-bold">$921.48</p>
+                </div>
+                <div>
+                    <img src="images/logo.svg" alt="" class="h-8">
+                </div>
+            </div>
+            <div class="p-4 bg-white rounded-lg space-y-6">
+                <p class="text-xl font-bold text-darkBrown">
+                    Spending - Last 7 days
+                </p>
+                <div class="w-full">
+                    <canvas id="expenses"></canvas>
+                </div>
+                <hr>
+                <div class="flex justify-between">
+                    <div>
+                      <p class="text-sm text-mediumBrown">Total this month</p>
+                      <p class="text-3xl font-bold text-darkBrown">$478.33</p>
+                    </div>
+                    <div class="flex flex-col items-end justify-end">
+                      <p class="text-sm text-darkBrown">+2.4%</p>
+                      <p class="text-sm text-mediumBrown">from last month</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <img src="images/logo.svg" alt="" class="h-8">
-        </div>
-      </div>
-      <div class="bg-paleOrange p-5 space-y-4">
-        <p class="text-xl font-bold text-darkBrown">
-          Spending - Last 7 days
-        </p>
-        <div class="w-full min-h-[12rem]">
-          <canvas id="expenses"></canvas>
-        </div>
-        <hr>
-        <div class="flex justify-between">
-          <div>
-            <p class="text-sm text-mediumBrown">Total this month</p>
-            <p class="text-3xl font-bold text-darkBrown">$478.33</p>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Jurdel Gallano</a>.
           </div>
-          <div class="flex flex-col items-end justify-end">
-            <p class="text-sm text-darkBrown">+2.4%</p>
-            <p class="text-sm text-mediumBrown">from last month</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </main>
+    </main>
 
-  
-  
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
